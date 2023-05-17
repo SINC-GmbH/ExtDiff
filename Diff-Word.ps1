@@ -27,7 +27,7 @@ try {
     $word = New-Object -ComObject Word.Application
     $word.Visible = $true
     $document = $word.Documents.Open($BaseFileName, $false, $false)
-    $document.Compare($ChangedFileName, [ref]"Comparison", [ref]$wdCompareTargetNew, [ref]$true, [ref]$true)
+    $document.Compare($ChangedFileName, [ref]"Comparison", [ref]$wdCompareTargetNew, [ref]$false, [ref]$true)
 
     $word.ActiveDocument.Saved = 1
 
